@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"game","l":"AgeComparator"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"game","l":"Employee"},{"p":"game","l":"Game"},{"p":"game","l":"Main"},{"p":"game","l":"Participant"},{"p":"game","l":"Schoolar"},{"p":"game","l":"SerializationDemo"},{"p":"game","l":"Student"},{"p":"game","l":"Team"}];updateSearchResults();
