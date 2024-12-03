@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mssql-jdbc-12.8.1.jre8">
+    <CLASSES>
+      <root url="jar://D:/Programs/SQL/JDBC Driver/sqljdbc_12.8/rus/jars/mssql-jdbc-12.8.1.jre8.jar!/" />
+      <root url="jar://D:/Programs/MySQL/JDBC Driver/mysql-connector-j-9.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
