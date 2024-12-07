@@ -1,4 +1,4 @@
-package Task03;
+package Task_03;
 
 public class StringBuilderPractice {
 
