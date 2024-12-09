@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<section class="vh-100" style="background-color: #3da2c3;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4">
+                        <p class="mb-2">
+                            <span class="h2 me-2">TODO List</span>
+                        </p>
+                        <ul class="list-group rounded-0 pb-2" th:if="${not #lists.isEmpty(todos)}" th:each="t: ${todos}">
+                            <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." th:checked="${t.completed}" />
+                                <span class="me-auto" th:text="${t.data}"></span>
+
+                                <form th:action="@{/todo/edit/{id}(id=${t.id})}" method="get" class="me-2 d-inline">
+                                    <button type="submit" class="btn btn-warning btn-sm">Edit</button>
+                                </form>
+
+                                <form th:action="@{/todo/delete/{id}(id=${t.id})}" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </li>
+                        </ul>
+
+                        <form class="d-flex justify-content-center align-items-center mt-4" method="POST" th:object="${todo}" th:action="@{/}">
+                            <div data-mdb-input-init class="form-outline flex-fill">
+                                <input type="text" id="form2" class="form-control" th:field="*{data}" placeholder="Enter new task" />
+                            </div>
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-info ms-2">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
