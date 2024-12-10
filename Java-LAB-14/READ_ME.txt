@@ -1,0 +1,1 @@
+Type the command "mvn spring-boot:run" into the terminal and go to http://localhost:8080/
